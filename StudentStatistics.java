@@ -71,6 +71,17 @@ public class StudentStatistics
         return highMark;
     }
         
+      
+   public double findMean() {
+    double sum = 0; 
+    
+    for (double mark : this.studentMarks){
+        sum += mark; 
+    }
+    double mean = sum / this.studentMarks.length; 
+    System.out.println("Mean of the Studentmarks: " + mean);
+    return mean; 
+}
     
     
         
