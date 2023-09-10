@@ -1,0 +1,28 @@
+Algorithm1:
+To find the highest and lowest Student Marks.
+1. Declare a Method 'findLowestMark' and 'findhighestMark'.
+2. Initialize 'lowMark' and 'highMark' variable  to store initial value of studentMark array.
+3.for each mark in studentMarks array
+     if mark < lowMark
+4.Return lowMark
+5.for each mark in studentMarks array
+     if mark > highMark
+6.Return highMark
+
+
+
+Algorithm2:
+To find the Mean and Standard Deviation of Student Marks.
+1. Declare a Method 'findMean' and 'findStandardDeviation'.
+2. Initialize sum variable to zero.
+3. for each mark in studentMarks array
+      Iterate mark of the student and add to the sum.
+4. mean = sum / length of studentmarks array.
+6. Return mean value.
+7. Initialize standardDeviation variable to zero.
+8. for each mark in studentMarks array
+      1.Calculate sqauredDifference using (mark - mean) ^ 2.
+      2.Add the squaredDifference to standardDeviation.
+9. Calculate  standardDeviation by using Math.sqrt
+     standardDeviation = Math.sqrt(standardDeviation / studentMarks.length)
+10. Return standardDeviation.   
