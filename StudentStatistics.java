@@ -38,7 +38,7 @@ public class StudentStatistics
     
     }
     
-    //Method Display Results.
+    // Method Display Results.
     public void CalculateResults() {
         double lowestMark = findLowestMark();
         double highestMark = findHighestMark();
@@ -47,7 +47,7 @@ public class StudentStatistics
     }
     
     
-    // Method to find the lowest Mark
+    // Method to find the lowest Mark.
     public double findLowestMark() {
         double lowMark = this.studentMarks[0];
         
@@ -59,7 +59,7 @@ public class StudentStatistics
         return lowMark;
     }
     
-    // Method to find the highest Mark
+    // Method to find the highest Mark.
     public double findHighestMark() {
         double highMark = this.studentMarks[0]; //Intialize the 'highMark' Variable with first element of studentsMark array.
         
@@ -71,8 +71,8 @@ public class StudentStatistics
         return highMark; // Return latest highest mark in the array.
     }
         
-      
-   public double findMean() {
+    // Method to find the Mean.   
+    public double findMean() {
     double sum = 0; //initialize varaible 'sum'.
     
     for (double mark : studentMarks){
@@ -83,12 +83,19 @@ public class StudentStatistics
     return mean; // return the mean output.
 }
     
+    // Method to find the StandardDeviation.
+    public double findStandardDeviation() {
+    double mean = findMean(); // Store the mean value in 'mean' variable by calling findMean function.
+    double standardDeviation = 0; // Initialize the 'standardDeviation' variable to collect the squared differences.
+
+    for (double mark : studentMarks) { 
+        standardDeviation += Math.pow(mark - mean, 2); // calculate squared differences between each mark and mean and raise to the power of 2 and store in 'standardDeviation'.
+    }
+    standardDeviation = Math.sqrt(standardDeviation/studentMarks.length); // calculate the square root of the average of squared differences.
+    System.out.println("Standard Deviation of the Studentmarks: " + standardDeviation); // Print the standardDeviation to the screen.
     
-        
-        
-        
-        
-        
+    return standardDeviation; // Return the calculated standardDeviation value.
+}
     
     }
     
