@@ -38,4 +38,38 @@ public class StudentStatistics
     
     }
     
-}
+    //Method Display Results.
+    public void CalculateResults() {
+        double lowestMark = findLowestMark();
+        
+        System.out.println("Lowest Mark: " + lowestMark);
+    }
+    
+    
+    // Method to find the lowest mark
+    public double findLowestMark() {
+        double lowMark = this.studentMarks[0];
+        
+        for (double mark : this.studentMarks){
+            if (mark < lowMark) {
+                lowMark = mark;
+            }
+        }
+        return lowMark;
+    }
+        
+    
+    
+        
+        
+        
+        
+        
+    
+    }
+    
+    
+    
+    
+    
+
