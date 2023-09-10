@@ -61,14 +61,14 @@ public class StudentStatistics
     
     // Method to find the highest Mark
     public double findHighestMark() {
-        double highMark = this.studentMarks[0];
+        double highMark = this.studentMarks[0]; //Intialize the 'highMark' Variable with first element of studentsMark array.
         
-        for(double mark : studentMarks){
-            if(mark > highMark) {
-                highMark = mark;
+        for(double mark : studentMarks){ 
+            if(mark > highMark) { // Condition to check if Current 'mark' is greater than current 'highMark'.
+                highMark = mark; // If 'mark' is greater update 'highMark'. 
             }
         }
-        return highMark;
+        return highMark; // Return latest highest mark in the array.
     }
         
       
@@ -76,11 +76,11 @@ public class StudentStatistics
     double sum = 0; //initialize varaible 'sum'.
     
     for (double mark : studentMarks){
-        sum += mark; 
+        sum += mark; // Iterate mark of the student and add to the sum.
     }
-    double mean = sum / studentMarks.length; 
-    System.out.println("Mean of the Studentmarks: " + mean);
-    return mean; 
+    double mean = sum / studentMarks.length; // Calculate mean.
+    System.out.println("Mean of the Studentmarks: " + mean); // Print Mean to the Screen.
+    return mean; // return the mean output.
 }
     
     
