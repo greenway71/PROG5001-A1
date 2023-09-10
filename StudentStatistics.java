@@ -41,12 +41,13 @@ public class StudentStatistics
     //Method Display Results.
     public void CalculateResults() {
         double lowestMark = findLowestMark();
-        
+        double highestMark = findHighestMark();
         System.out.println("Lowest Mark: " + lowestMark);
+        System.out.println("Highest Mark: " + highestMark);
     }
     
     
-    // Method to find the lowest mark
+    // Method to find the lowest Mark
     public double findLowestMark() {
         double lowMark = this.studentMarks[0];
         
@@ -56,6 +57,18 @@ public class StudentStatistics
             }
         }
         return lowMark;
+    }
+    
+    // Method to find the highest Mark
+    public double findHighestMark() {
+        double highMark = this.studentMarks[0];
+        
+        for(double mark : this.studentMarks){
+            if(mark > highMark) {
+                highMark = mark;
+            }
+        }
+        return highMark;
     }
         
     
