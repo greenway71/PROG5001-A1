@@ -51,7 +51,7 @@ public class StudentStatistics
     public double findLowestMark() {
         double lowMark = this.studentMarks[0];
         
-        for (double mark : this.studentMarks){
+        for (double mark : studentMarks){
             if (mark < lowMark) {
                 lowMark = mark;
             }
@@ -63,7 +63,7 @@ public class StudentStatistics
     public double findHighestMark() {
         double highMark = this.studentMarks[0];
         
-        for(double mark : this.studentMarks){
+        for(double mark : studentMarks){
             if(mark > highMark) {
                 highMark = mark;
             }
@@ -73,12 +73,12 @@ public class StudentStatistics
         
       
    public double findMean() {
-    double sum = 0; 
+    double sum = 0; //initialize varaible 'sum'.
     
-    for (double mark : this.studentMarks){
+    for (double mark : studentMarks){
         sum += mark; 
     }
-    double mean = sum / this.studentMarks.length; 
+    double mean = sum / studentMarks.length; 
     System.out.println("Mean of the Studentmarks: " + mean);
     return mean; 
 }
