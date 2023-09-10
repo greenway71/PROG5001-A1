@@ -49,14 +49,14 @@ public class StudentStatistics
     
     // Method to find the lowest Mark.
     public double findLowestMark() {
-        double lowMark = this.studentMarks[0];
+        double lowMark = this.studentMarks[0]; //Intialize the 'lowMark' Variable with first element of studentsMark array.
         
         for (double mark : studentMarks){
-            if (mark < lowMark) {
-                lowMark = mark;
+            if (mark < lowMark) {  // Condition to check if Current 'mark' is less than current 'lowMark'.
+                lowMark = mark; // If 'mark' is less then update 'lowMark'.
             }
         }
-        return lowMark;
+        return lowMark; //Return latest lowest mark in the array.
     }
     
     // Method to find the highest Mark.
