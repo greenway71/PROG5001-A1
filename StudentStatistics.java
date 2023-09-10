@@ -13,6 +13,10 @@ public class StudentStatistics
     
     public void RecieveMarks(){
         Scanner scanner = new Scanner(System.in); // Initialize scanner object to read input.
+        
+        System.out.print("Enter the Assignment Name: "); // Allow user to input the Assignmnet Name
+        String assignmentName = scanner.nextLine();
+        
         for (int i =0; i < 30; i++) {
             do {
                 System.out.print("Enter the Student Marks " + (i+1) + "(0-30): "); // prompt the user to enter the student marks
